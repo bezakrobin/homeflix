@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block app %}
+<section class="showcase">
+    <header>
+        <h2 class="logo">Homeflix</h2>
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+            <input type="search" class="form-control" placeholder="Vyhledat..." aria-label="Search">
+        </form>
+    </header>
+
+    <video id="trailer" autoplay muted loop>
+        <source src="../static/trailers/{{trailer}}">
+    </video>
+    <img class="movie-poster" src="../static/posters/{{poster}}">
+
+    <div class="overlay"></div>
+
+    <div class="text">
+        <h2>Avatar: The Way of Water</h2>
+        <a class="play-btn" href="#"><i class="gg-play-button"></i>Přehrát</a>
+        <a class="info-btn" href="#"><i class="gg-info"></i></i>Další informace</a>
+    </div>
+
+    <div class="right-overlay">
+        <div class="overlay-content">
+            <img onclick="toggleVolume(this);"  class="volume-btn" src="../static/volume-icons/mute.png">
+            <p>16+</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.showcase {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  z-index: 2;
+}
+
+.showcase header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.showcase video {
+  position: absolute;
+  top: -15%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text {
+  position: absolute;
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  mix-blend-mode: overlay;
+}
+
+.volume-btn {
+  margin-right: 15px !important;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.text h2 {
+  font-size: 3em;
+  font-weight: 800;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.movie-poster {
+  display: none;
+}
+
+.form-control {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none !important;
+  color: white;
+}
+
+.form-control:active, .form-control:focus, .form-control:hover {
+  outline: none !important;
+  box-shadow: none;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+input[type=search]:hover, input[type=search]:focus, input[type=search]:active {
+  width: 300px;
+  transition: 0.5s;
+}
+
+input[type=search] {
+  width: 200px;
+  transition: 0.5s;
+}
+
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+.play-btn {
+  color: black;
+  background-color: white;
+}
+
+.play-btn:hover {
+  background: rgb(122, 122, 122);
+}
+
+.info-btn {
+  background: rgba(255, 255, 255, 0.5);
+  color: white;
+}
+
+.info-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.gg-info {
+  width: 22px;
+  height: 22px;
+}
+
+.gg-info::after {
+  bottom: 3px;
+  height: 8px
+}
+.gg-info::before {
+  height: 3px;
+  top: 3px
+}
+
+.gg-info::after,
+.gg-info::before {
+    left: 8px
+}
+
+a {
+  display: inline-flex !important;
+  box-shadow: none;
+  font-size: 1em;
+  padding: 10px 30px;
+  text-decoration: none;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 3px;
+}
+
+a i {
+  margin-right: 5px !important;
+}
+
+.right-overlay {
+  top: 55vh;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  right: 0;
+  z-index: 3;
+}
+
+.right-overlay p {
+  background: rgba(180, 180, 180, 0.2);
+  padding: 10px 30px;
+  border-left: 2px solid white !important;
+  color: white;
+  margin-bottom: 0 !important;
+}
+
+.overlay-content {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  cursor: default;
+}
+
+@media (max-width: 991px) {
+  .showcase,
+  .showcase header {
+    padding: 40px;
+  }
+
+  input[type=search] {
+    width: 80vw;
+    transition: 0.5s;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .text {
+    top: 50vh;
+  }
+
+  .text h2 {
+    font-size: 2em;
+    margin-right: 20px;
+    text-align: center;
+  }
+
+  .text a {
+    padding: 5px 15px;
+    font-size: 0.8em;
+  }
+
+  .showcase video {
+    display: none;
+  }
+
+  .movie-poster {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .overlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .right-overlay {
+    display: none;
+  }
+}
