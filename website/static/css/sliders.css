@@ -83,6 +83,7 @@ body {
 
 .slider-header {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: .5rem 5.5rem;
 }
@@ -94,8 +95,6 @@ body {
 }
 
 .slider-progress-bar {
-    align-items: center;
-    justify-content: center;
     display: flex;
     gap: .25rem;
 }

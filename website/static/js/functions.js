@@ -27,17 +27,31 @@ document.addEventListener("click", e => {
 })
 
 function onHandleClick(handle) {
+    const progressBar = handle.closest(".slider-row").querySelector(".slider-progress-bar")
     const slider = handle.closest(".slider-container").querySelector(".slider")
     const sliderIndex = parseInt(getComputedStyle(slider).getPropertyValue("--slider-index"))
-    if (sliderIndex == 0) {
-    } else {
-        handle.style.setProperty("--display-handle", "display");
-    }
+    const progressBarItemCount = progressBar.children.length
     if (handle.classList.contains("left-handle")) {
-        slider.style.setProperty("--slider-index", sliderIndex - 1)
+        if (sliderIndex - 1 < 0) {
+            slider.style.setProperty("--slider-index", progressBarItemCount - 1)
+            progressBar.children[sliderIndex].classList.remove('active')
+            progressBar.children[progressBarItemCount - 1].classList.add('active')
+        } else {
+            slider.style.setProperty("--slider-index", sliderIndex - 1)
+            progressBar.children[sliderIndex].classList.remove('active')
+            progressBar.children[sliderIndex - 1].classList.add('active')
+        }
     }
     if (handle.classList.contains("right-handle")) {
-        slider.style.setProperty("--slider-index", sliderIndex + 1)
+        if (sliderIndex + 1 >= progressBarItemCount) {
+            slider.style.setProperty("--slider-index", 0)
+            progressBar.children[sliderIndex].classList.remove('active')
+            progressBar.children[0].classList.add('active')
+        } else {
+            slider.style.setProperty("--slider-index", sliderIndex + 1)
+            progressBar.children[sliderIndex].classList.remove('active')
+            progressBar.children[sliderIndex + 1].classList.add('active')
+        }
     }
 }
 
