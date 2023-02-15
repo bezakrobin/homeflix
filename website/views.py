@@ -36,4 +36,4 @@ def getFromImdb(id):
         categories.append(category['text'])
     trailer = data['props']['pageProps']['aboveTheFoldData']['primaryVideos']['edges'][0]['node']['playbackURLs'][0]['url']
     description = data['props']['pageProps']['aboveTheFoldData']['plot']['plotText']['plainText']
-    return { title, year, length, rating, poster, categories, trailer, description }
+    return [ title, year, length, rating, poster, categories, trailer, description ]
