@@ -19,6 +19,8 @@ def getNewest():
 
 
 # getting ready for adding a film to db, downloading trailer and poster
+# make it without needing id, send in just imdb url, and the program will care about all
+# prepare for connecting to bombuj, europix or something else, also prepare for the torrent solution
 def getFromImdb(id):
     movies = requests.get('http://localhost:3000/movies/' + str(id))
     url = movies.json()['imdb-url']
