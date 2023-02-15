@@ -55,9 +55,11 @@ function onHandleClick(handle) {
     }
 }
 
-window.addEventListener("resize", (e) => {
-    // recalculate progress bar
-})
+const throttleProgressBar = throttle(() => {
+    document.querySelectorAll(".slider-progress-bar").forEach(calculateProgressBar)
+}, 250)
+
+window.addEventListener("resize", throttleProgressBar)
 
 document.querySelectorAll(".slider-progress-bar").forEach(calculateProgressBar)
 
@@ -66,8 +68,12 @@ function calculateProgressBar(progressBar) {
     const slider = progressBar.closest(".slider-row").querySelector(".slider")
     const itemCount = slider.children.length
     const itemsPerScreen = parseInt(getComputedStyle(slider).getPropertyValue("--items-per-screen"))
-    const sliderIndex = parseInt(getComputedStyle(slider).getPropertyValue("--slider-index"))
+    let sliderIndex = parseInt(getComputedStyle(slider).getPropertyValue("--slider-index"))
     const progressBarItemCount = Math.ceil(itemCount / itemsPerScreen)
+    if (sliderIndex >= progressBarItemCount) {
+        slider.style.setProperty("--slider-index", progressBarItemCount - 1)
+        sliderIndex = progressBarItemCount - 1
+    }
     for (let i = 0; i < progressBarItemCount; i++) {
         const barItem = document.createElement("div")
         barItem.classList.add("slider-progress-item")
@@ -76,4 +82,29 @@ function calculateProgressBar(progressBar) {
         }
         progressBar.append(barItem)
     }
+}
+
+function throttle(cb, delay = 1000) {
+    let shouldWait = false
+    let waitingArgs
+    const timeoutFunc = () => {
+        if (waitingArgs == null) {
+            shouldWait = false
+        } else {
+            cd(...waitingArgs)
+            waitingArgs = null
+            setTimeout(timeoutFunc, delay)
+        }
+    }
+
+    return (...args) => {
+        if (shouldWait) {
+            waitingArgs = args
+            return
+        }
+    }
+
+    cb(...args)
+    shouldWait = true
+    setTimeout(timeoutFunc, delay)
 }

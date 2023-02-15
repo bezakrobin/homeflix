@@ -10,14 +10,14 @@
     </header>
 
     <video id="trailer" autoplay muted loop>
-        <source src="../static/trailers/{{trailer}}">
+        <source src="{{header.trailer}}">
     </video>
-    <img class="movie-poster" src="../static/posters/{{poster}}">
+    <img class="movie-poster" src="{{header.poster}}">
 
     <div class="overlay"></div>
 
     <div class="text">
-        <h2>Avatar: The Way of Water</h2>
+        <h2>{{header.title}}</h2>
         <a class="play-btn" href="#"><i class="gg-play-button"></i>Přehrát</a>
         <a class="info-btn" href="#"><i class="gg-info"></i></i>Další informace</a>
     </div>
@@ -25,42 +25,44 @@
     <div class="right-overlay">
         <div class="overlay-content">
             <img onclick="toggleVolume(this);"  class="volume-btn" src="../static/volume-icons/mute.png">
-            <p>16+</p>
+            <p><i class="fa fa-star-o" style="font-size:22px"></i>{{header.rating}}</p>
         </div>
     </div>
 </section>
 
-<div class="slider-row">
-    <div class="slider-header">
-        <h3 class="slider-title">Title</h3>
-        <div class="slider-progress-bar">
-            <div class="slider-progress-item active"></div>
-            <div class="slider-progress-item"></div>
-            <div class="slider-progress-item"></div>
-            <div class="slider-progress-item"></div>
+<section>
+    <div class="slider-row">
+        <div class="slider-header">
+            <h3 class="slider-title">Title</h3>
+            <div class="slider-progress-bar">
+                <div class="slider-progress-item active"></div>
+                <div class="slider-progress-item"></div>
+                <div class="slider-progress-item"></div>
+                <div class="slider-progress-item"></div>
+            </div>
+        </div>
+        <div class="slider-container">
+            <button class="handle left-handle">
+                <div class="text">&#8249;</div>
+            </button>
+            <div class="slider">
+                <img class="slide" src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_FMjpg_UX900_.jpg" alt="movie name">
+                <img class="slide" src="https://m.media-amazon.com/images/M/MV5BY2I4NWE2OTAtMzZhNC00MjgzLTg2ZDEtMTllYWI5MDdiMWE0XkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_FMjpg_UX611_.jpg" alt="movie name">
+                <img class="slide" src="https://via.placeholder.com/230?text=3" alt="movie name">
+                <img class="slide" src="https://via.placeholder.com/240?text=4" alt="movie name">
+                <img class="slide" src="https://via.placeholder.com/250?text=5" alt="movie name">
+                <img class="slide" src="https://via.placeholder.com/260?text=6" alt="movie name">
+                <img class="slide" src="https://via.placeholder.com/270?text=7" alt="movie name">
+                <img class="slide" src="https://via.placeholder.com/280?text=8" alt="movie name">
+                <img class="slide" src="https://via.placeholder.com/290?text=9" alt="movie name">
+                <img class="slide" src="https://via.placeholder.com/270?text=10" alt="movie name">
+                <img class="slide" src="https://via.placeholder.com/280?text=11" alt="movie name">
+                <img class="slide" src="https://via.placeholder.com/290?text=12" alt="movie name">
+            </div>
+            <button class="handle right-handle">
+                <div class="text">&#8250;</div>
+            </button>
         </div>
     </div>
-    <div class="slider-container">
-        <button class="handle left-handle">
-            <div class="text">&#8249;</div>
-        </button>
-        <div class="slider">
-            <img src="https://via.placeholder.com/210?text=1" alt="movie name">
-            <img src="https://via.placeholder.com/220?text=2" alt="movie name">
-            <img src="https://via.placeholder.com/230?text=3" alt="movie name">
-            <img src="https://via.placeholder.com/240?text=4" alt="movie name">
-            <img src="https://via.placeholder.com/250?text=5" alt="movie name">
-            <img src="https://via.placeholder.com/260?text=6" alt="movie name">
-            <img src="https://via.placeholder.com/270?text=7" alt="movie name">
-            <img src="https://via.placeholder.com/280?text=8" alt="movie name">
-            <img src="https://via.placeholder.com/290?text=9" alt="movie name">
-            <img src="https://via.placeholder.com/270?text=10" alt="movie name">
-            <img src="https://via.placeholder.com/280?text=11" alt="movie name">
-            <img src="https://via.placeholder.com/290?text=12" alt="movie name">
-        </div>
-        <button class="handle right-handle">
-            <div class="text">&#8250;</div>
-        </button>
-    </div>
-</div>
+</section>
 {% endblock %}

@@ -1,0 +1,32 @@
+{
+    "movies": [
+        { 
+            "id": 1,
+            "title": "Avatar: The Way of Water",
+            "year": 2022,
+            "length": "3h 12m",
+            "rating": 7.8,
+            "poster": "https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_FMjpg_UX900_.jpg",
+            "categories": [
+                "Action", "Adventure", "Fantasy"
+            ],
+            "imdb-url": "https://www.imdb.com/title/tt1630029/",
+            "trailer": "https://imdb-video.media-imdb.com/vi3565864217/1434659607842-pgv4ql-1669124569701.mp4?Expires=1676506972&Signature=BwaNpsLUHmIpHer5S~ZrpY0VYTlLNClq4vlbqbduQAjyvfgacbVpPHGWvrvolJAUdgZnD3he8pQr1aHx-W~vTkkxnQO89mMJCs9fm6zW1JU5DrmBO2sfc3GUT-lsY6alUW-ftaLlLpCF-TTFO0J75qv1sI5uuWKPDZ6kf0So7rlcMEXE94qsEfJckR4mNBZNf4~G410viu4CG9mbGbQfRe53AvqiZS~FmNBeE89Fb1hAz8Didq0PtsyiD~LljEqxNcXC0P9sHPHn1YwEmGZRxaJvvQrMFxf~Si42I3RkdyiEs4yWg3BkVhwvoDFBrDmw6PD1Xoq3E9KT7la8dbBN8w__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
+            "description": "Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Na'vi race to protect their home."
+        },
+        { 
+            "id": 2,
+            "title": "Harry Potter and the Sorcerer's Stone",
+            "year": 2001,
+            "length": "2h 32m",
+            "rating": 7.6,
+            "poster": "https://m.media-amazon.com/images/M/MV5BNmQ0ODBhMjUtNDRhOC00MGQzLTk5MTAtZDliODg5NmU5MjZhXkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_FMjpg_UY720_.jpg",
+            "categories": [
+                "Adventure", "Family", "Fantasy"
+            ],
+            "imdb-url": "https://www.imdb.com/title/tt0241527/",
+            "trailer": "https://imdb-video.media-imdb.com/vi3115057433/1434659607842-pgv4ql-1563467990347.mp4?Expires=1676506605&Signature=jWIp9Y62yhv5xjvOKmJ~7ik8laZnFkyv82Z93ENUzE8~dMZ5Q7hX53o4arDIyqbuOA1D6DBm9JShWY05lyzx6sYNZ-e0BDEw58PbRAi1oSRL56rFBr9gHv0B-iz7rnDojCnR2wTAH2M3JEWGArxWujI8CLlMe4LcdTdr8IipM9hRrRV-4LJC0yPKil-CLmo7Q345xxB6H6Sbjs6kF2iq0Z3XcEtBe0SEJ2JdFh6NAFN3iNvo4wo~E7zBF4qyFNs3Dub--Kb4e4xKnStaIrvBsCwqfepjxxzzsYAIkyg9FqAZ8PfwmxbpXcFwT6nVPL-WkXB3STv8dZmksIqcgJCXFg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
+            "description": "An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world."
+        }
+    ]
+}

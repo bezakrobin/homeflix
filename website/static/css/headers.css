@@ -112,12 +112,12 @@ input[type=search] {
 }
 
 .info-btn {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.5);
   color: white;
 }
 
 .info-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .gg-info {
@@ -155,6 +155,14 @@ a i {
   margin-right: 5px !important;
 }
 
+p {
+  display: inline-flex !important;
+}
+
+p i {
+  margin-right: 5px !important;
+}
+
 .right-overlay {
   top: 55vh;
   position: absolute;
@@ -166,7 +174,7 @@ a i {
 
 .right-overlay p {
   background: rgba(180, 180, 180, 0.2);
-  padding: 10px 30px;
+  padding: 10px 20px;
   border-left: 2px solid white !important;
   color: white;
   margin-bottom: 0 !important;
@@ -197,13 +205,11 @@ a i {
   }
 
   .text {
-    top: 50vh;
+    top: 60vh;
   }
 
   .text h2 {
-    font-size: 2em;
-    margin-right: 20px;
-    text-align: center;
+    display: none;
   }
 
   .text a {
@@ -222,10 +228,8 @@ a i {
     left: 0;
     width: 100vw;
     height: 100vh;
-  }
-
-  .overlay {
-    background: rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+    object-position: top;
   }
 
   .right-overlay {
