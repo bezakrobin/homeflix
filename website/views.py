@@ -9,7 +9,7 @@ headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/
 @views.route('/')
 def home():
     header = getNewest()
-    getFromImdb(header['id'])
+    data = getFromImdb(header['id'])
     return render_template('home.html', header = header)
 
 def getNewest():
