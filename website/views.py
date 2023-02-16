@@ -19,17 +19,21 @@ def add_movie():
             if is_imdb_url(url):
                 print('LOG: Valid IMDB movie url')
                 data = get_movie_from_imdb(url)
-                poster_path = save_movie_poster(data[0], data[5], data[1])
-                trailer_path = save_movie_trailer(data[0], data[7], data[1])
-                json_object = data_to_json_object(data, poster_path, trailer_path, url)
-                put_movie_data_into_db(json_object)
+                imdb_ids = fetch_imdb_id()
+                if data[0] in imdb_ids:
+                    print('LOG: This movie is already added')
+                else:
+                    poster_path = save_movie_poster(data[0], data[5], data[1])
+                    trailer_path = save_movie_trailer(data[0], data[7], data[1])
+                    json_object = data_to_json_object(data, poster_path, trailer_path, url)
+                    put_movie_data_into_db(json_object)
             else:
                 print('LOG: Invalid IMDB movie url')
             return redirect(url_for('views.add_movie'))
     return render_template('settings.html')
 
 def get_newest():
-    movies = requests.get('http://localhost:3000/movies?_sort=year,id&_order=desc,desc')
+    movies = requests.get('http://localhost:3000/movies_collection?_sort=year,id&_order=desc,desc')
     if movies.ok:
         print('LOG: get_newest() response: ' + "% s" % movies.status_code)
         data = movies.json()[0]
@@ -91,12 +95,24 @@ def data_to_json_object(data, poster, trailer, url):
     return json_object
 
 def put_movie_data_into_db(json_object):
-    # check if the movie is already in DB, add only if not
-    movies = requests.post('http://localhost:3000/movies', json = json_object)
-    if movies.ok:
-        print('LOG: put_movie_data_into_db() response: ' + "% s" % movies.status_code)
+    movie = requests.post('http://localhost:3000/movies_collection', json = json_object)
+    if movie.ok:
+        print('LOG: put_movie_data_into_db() response: ' + "% s" % movie.status_code)
     else:
-        print('LOG: put_movie_data_into_db() response: ' + "% s" % movies.status_code)
+        print('LOG: put_movie_data_into_db() response: ' + "% s" % movie.status_code)
+
+def fetch_imdb_id():
+    imdb_id_length = len(json.loads(requests.get('http://localhost:3000/movies_collection').content))
+    imdb_ids = []
+    for i in range(1, imdb_id_length + 1):
+        imdb_id_response = requests.get('http://localhost:3000/movies_collection/' + str(i))
+        if imdb_id_response.ok:
+            print('LOG: fetch_imdb_id() response: ' + "% s" % imdb_id_response.status_code)
+            imdb_id_json = json.loads(imdb_id_response.content)
+            imdb_ids.append(imdb_id_json['imdb_id'])
+        else:
+            print('LOG: fetch_imdb_id() response: ' + "% s" % imdb_id_response.status_code)
+    return imdb_ids
 
 # prepare for connecting to bombuj, europix or something else, also prepare for the torrent solution
 def get_movie_from_imdb(url):
