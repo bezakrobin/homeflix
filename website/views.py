@@ -19,8 +19,10 @@ def add_movie():
             if is_imdb_url(url):
                 print('LOG: Valid IMDB movie url')
                 data = get_movie_from_imdb(url)
-                save_movie_poster(data[0], data[5], data[1])
-                save_movie_trailer(data[0], data[7], data[1])
+                poster_path = save_movie_poster(data[0], data[5], data[1])
+                trailer_path = save_movie_trailer(data[0], data[7], data[1])
+                json_object = data_to_json_object(data, poster_path, trailer_path, url)
+                put_movie_data_into_db(json_object)
             else:
                 print('LOG: Invalid IMDB movie url')
             return redirect(url_for('views.add_movie'))
@@ -51,6 +53,7 @@ def save_movie_poster(imdb_id, url, title):
         while not os.path.exists(filename):
             time.sleep(1)
         print('LOG: save_movie_poster() successfully saved poster for movie: ' + title)
+        return filename
     else:
         print('LOG: save_movie_poster() response: ' + "% s" % poster.status_code)
 
@@ -66,11 +69,31 @@ def save_movie_trailer(imdb_id, url, title):
         while not os.path.exists(filename):
             time.sleep(1)
         print('LOG: save_movie_poster() successfully saved trailer for movie: ' + title)
+        return filename
     else:
         print('LOG: save_movie_trailer() response: ' + "% s" % trailer.status_code)
 
-def put_movie_data_into_db():
-    pass
+def data_to_json_object(data, poster, trailer, url):
+    json_object = {
+        "imdb_id": data[0],
+        "title": data[1],
+        "year": data[2],
+        "length": data[3],
+        "rating": data[4],
+        "poster_path": poster,
+        "categories": data[6],
+        "imdb_url": url,
+        "trailer_path": trailer,
+        "description": data[8]
+    }
+    return json_object
+
+def put_movie_data_into_db(json_object):
+    movies = requests.post('http://localhost:3000/movies', json = json_object)
+    if movies.ok:
+        print('LOG: put_movie_data_into_db() response: ' + "% s" % movies.status_code)
+    else:
+        print('LOG: put_movie_data_into_db() response: ' + "% s" % movies.status_code)
 
 
 # getting ready for adding a film to db
@@ -79,7 +102,7 @@ def get_movie_from_imdb(url):
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 OPR/94.0.0.0'}
     imdb = requests.get(url, headers = headers)
     if imdb.ok:
-        print('LOG: get_movie_from_imdb() response: ' + "% s" % trailer.status_code)
+        print('LOG: get_movie_from_imdb() response: ' + "% s" % imdb.status_code)
         soup = BeautifulSoup(imdb.text, "html.parser")
         script = soup.find(id = '__NEXT_DATA__')
         data = json.loads(script.get_text())
