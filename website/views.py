@@ -69,25 +69,31 @@ def save_movie_trailer(imdb_id, url, title):
     else:
         print('LOG: save_movie_trailer() response: ' + "% s" % trailer.status_code)
 
+def put_movie_data_into_db():
+    pass
 
-# getting ready for adding a film to db, downloading trailer and poster
-# make it without needing id, send in just imdb url, and the program will care about all
+
+# getting ready for adding a film to db
 # prepare for connecting to bombuj, europix or something else, also prepare for the torrent solution
 def get_movie_from_imdb(url):
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 OPR/94.0.0.0'}
     imdb = requests.get(url, headers = headers)
-    soup = BeautifulSoup(imdb.text, "html.parser")
-    script = soup.find(id = '__NEXT_DATA__')
-    data = json.loads(script.get_text())
-    imdb_id = data['props']['pageProps']['aboveTheFoldData']['id']
-    title = data['props']['pageProps']['aboveTheFoldData']['originalTitleText']['text']
-    year = data['props']['pageProps']['aboveTheFoldData']['releaseYear']['year']
-    length = data['props']['pageProps']['aboveTheFoldData']['runtime']['displayableProperty']['value']['plainText']
-    rating = data['props']['pageProps']['aboveTheFoldData']['ratingsSummary']['aggregateRating']
-    poster = data['props']['pageProps']['aboveTheFoldData']['primaryImage']['url']
-    categories = []
-    for category in data['props']['pageProps']['aboveTheFoldData']['genres']['genres']:
-        categories.append(category['text'])
-    trailer = data['props']['pageProps']['aboveTheFoldData']['primaryVideos']['edges'][0]['node']['playbackURLs'][0]['url']
-    description = data['props']['pageProps']['aboveTheFoldData']['plot']['plotText']['plainText']
+    if imdb.ok:
+        print('LOG: get_movie_from_imdb() response: ' + "% s" % trailer.status_code)
+        soup = BeautifulSoup(imdb.text, "html.parser")
+        script = soup.find(id = '__NEXT_DATA__')
+        data = json.loads(script.get_text())
+        imdb_id = data['props']['pageProps']['aboveTheFoldData']['id']
+        title = data['props']['pageProps']['aboveTheFoldData']['originalTitleText']['text']
+        year = data['props']['pageProps']['aboveTheFoldData']['releaseYear']['year']
+        length = data['props']['pageProps']['aboveTheFoldData']['runtime']['displayableProperty']['value']['plainText']
+        rating = data['props']['pageProps']['aboveTheFoldData']['ratingsSummary']['aggregateRating']
+        poster = data['props']['pageProps']['aboveTheFoldData']['primaryImage']['url']
+        categories = []
+        for category in data['props']['pageProps']['aboveTheFoldData']['genres']['genres']:
+            categories.append(category['text'])
+        trailer = data['props']['pageProps']['aboveTheFoldData']['primaryVideos']['edges'][0]['node']['playbackURLs'][0]['url']
+        description = data['props']['pageProps']['aboveTheFoldData']['plot']['plotText']['plainText']
+    else:
+        print('LOG: get_movie_from_imdb() response: ' + "% s" % trailer.status_code)
     return [ imdb_id, title, year, length, rating, poster, categories, trailer, description ]
