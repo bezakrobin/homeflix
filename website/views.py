@@ -13,7 +13,6 @@ def home():
 def add_movie():
     if request.method == 'POST':
         url = request.form['imdb-url']
-
         if not url:
             print('LOG: No url given at: Add movie form')
         else:
@@ -28,12 +27,23 @@ def add_movie():
 
 def get_newest():
     movies = requests.get('http://localhost:3000/movies?_sort=year,id&_order=desc,desc')
-    data = movies.json()[0]
-    return data
+    if movies.ok:
+        print('LOG: get_newest() response: ' + "% s" % movies.status_code)
+        data = movies.json()[0]
+        return data
+    else:
+        print('LOG: get_newest() response: ' + "% s" % movies.status_code)
 
 def is_imdb_url(url):
     pattern = r'^https?://(www\.)?imdb\.com/title/tt\d+/$'
     return bool(re.match(pattern, url))
+
+def save_movie_poster(url):
+    with open('pic1.jpg', 'wb') as handle:
+        response = requests.get(url, stream=True)
+
+        if not response.ok:
+            print(response)
 
 
 # getting ready for adding a film to db, downloading trailer and poster
