@@ -1,7 +1,6 @@
-from flask import Blueprint, render_template, request, flash, url_for, redirect
-import requests, re, json
+from flask import Blueprint, render_template, request, url_for, redirect
+import requests, re, json, os, time
 from bs4 import BeautifulSoup
-from PIL import Image
 
 views = Blueprint('views', __name__)
 
@@ -20,7 +19,8 @@ def add_movie():
             if is_imdb_url(url):
                 print('LOG: Valid IMDB movie url')
                 data = get_movie_from_imdb(url)
-                save_movie_poster(data[0], data[5])
+                save_movie_poster(data[0], data[5], data[1])
+                save_movie_trailer(data[0], data[7], data[1])
             else:
                 print('LOG: Invalid IMDB movie url')
             return redirect(url_for('views.add_movie'))
@@ -39,9 +39,35 @@ def is_imdb_url(url):
     pattern = r'^https?://(www\.)?imdb\.com/title/tt\d+/$'
     return bool(re.match(pattern, url))
 
-def save_movie_poster(imdb_id, url):
-    img = Image.open(requests.get(url, stream = True).raw)
-    img.save('website/static/posters/' + imdb_id + '.jpg')
+def save_movie_poster(imdb_id, url, title):
+    poster = requests.get(url, stream=True)
+    filename = 'website/static/posters/' + imdb_id + '.jpg'
+    if poster.ok:
+        print('LOG: save_movie_poster() response: ' + "% s" % poster.status_code)
+        with open(filename, 'wb') as f:
+            for chunk in poster.iter_content(chunk_size=1024):
+                if chunk:
+                    f.write(chunk)
+        while not os.path.exists(filename):
+            time.sleep(1)
+        print('LOG: save_movie_poster() successfully saved poster for movie: ' + title)
+    else:
+        print('LOG: save_movie_poster() response: ' + "% s" % poster.status_code)
+
+def save_movie_trailer(imdb_id, url, title):
+    trailer = requests.get(url, stream=True)
+    filename = 'website/static/trailers/' + imdb_id + '.mp4'
+    if trailer.ok:
+        print('LOG: save_movie_trailer() response: ' + "% s" % trailer.status_code)
+        with open(filename, 'wb') as f:
+            for chunk in trailer.iter_content(chunk_size=1024):
+                if chunk:
+                    f.write(chunk)
+        while not os.path.exists(filename):
+            time.sleep(1)
+        print('LOG: save_movie_poster() successfully saved trailer for movie: ' + title)
+    else:
+        print('LOG: save_movie_trailer() response: ' + "% s" % trailer.status_code)
 
 
 # getting ready for adding a film to db, downloading trailer and poster
