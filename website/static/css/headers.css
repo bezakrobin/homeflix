@@ -216,8 +216,11 @@ p i {
 
   .text h2 {
     font-size: 1rem;
-    background: rgba(0, 0, 0, 0.6);
     padding: 10px;
+    padding-left: 0;
+    max-width: 80vw;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 
   .text a {
