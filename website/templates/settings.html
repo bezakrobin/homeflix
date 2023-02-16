@@ -3,9 +3,9 @@
 {% block app %}
 <div>
     <h2>Add movie form</h2>
-    <form>
-      <label for="add-movie">Add movie</label>
-      <input type="text" id="add-movie" name="add-movie" placeholder="IMDB movie url..">
+    <form method="POST">
+      <label for="imdb-url">Add movie (example: 'https://www.imdb.com/title/tt1630029/')</label>
+      <input type="text" id="imdb-url" name="imdb-url" placeholder="IMDB movie url..">
       <input type="submit" value="Add movie">
     </form>
 </div>

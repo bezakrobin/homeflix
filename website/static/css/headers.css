@@ -109,6 +109,7 @@ input[type=search] {
 
 .play-btn:hover {
   background: rgb(122, 122, 122);
+  transition: background 250ms ease-in-out;
 }
 
 .info-btn {
@@ -118,6 +119,7 @@ input[type=search] {
 
 .info-btn:hover {
   background: rgba(0, 0, 0, 0.3);
+  transition: background 250ms ease-in-out;
 }
 
 .gg-info {
@@ -186,7 +188,14 @@ p i {
 }
 
 .logo {
-  cursor: default;
+  cursor: pointer;
+  color: white;
+  border-bottom: 2px solid transparent;
+}
+
+.logo:hover {
+  border-bottom: 2px solid white;
+  transition: 250ms ease-in-out;
 }
 
 @media (max-width: 991px) {
