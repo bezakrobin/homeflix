@@ -6,15 +6,15 @@
       "year": 2022,
       "length": "3h 12m",
       "rating": 7.8,
-      "poster_path": "website/static/posters/tt1630029.jpg",
+      "poster_path": "../static/posters/tt1630029.jpg",
       "categories": [
         "Action",
         "Adventure",
         "Fantasy",
         "Sci-Fi"
       ],
-      "imdb_url": "https://imdb-video.media-imdb.com/vi3565864217/1434659607842-pgv4ql-1669124569701.mp4?Expires=1676655314&Signature=fl9NOCakTKjvDg-ksAJTLy972QtPf~6BJbeABmtaCxLrx2jUQrIsCSkXkYV67WMjh6YahxYBjDcD2eiPDb6eC9xOzUUv7gsj5u5PLZeiyWsjE4yORCRNVja3mSuOFYL9YnEn3RZ6Zmn7djcvXXATBYBUnHHjrrBFKiohVEAx7taKoNusIZbFWEE6Q9NoslKpLLFdnbVK~07dKeO~kn0zMdq4KwEKQ5cWpg2gF3EYbY6VEzTWMfytoFu9W0q0SAImtCNyHVgPmorBGc59CkxpPu6jE7HLY4EarvsN-xCllr5FeYFGCc4dArBWINdaSra4jIocEivwmn4o-6qCXsh7cw__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
-      "trailer_path": "website/static/trailers/tt1630029.mp4",
+      "imdb_url": "https://www.imdb.com/title/tt1630029/",
+      "trailer_path": "../static/trailers/tt1630029.mp4",
       "description": "Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Na'vi race to protect their home.",
       "id": 1
     }

@@ -7,6 +7,7 @@ views = Blueprint('views', __name__)
 @views.route('/')
 def home():
     header = get_newest()
+    print(header['trailer_path'])
     return render_template('home.html', header = header)
 
 @views.route('/settings', methods=['GET', 'POST'])
@@ -44,6 +45,7 @@ def is_imdb_url(url):
 def save_movie_poster(imdb_id, url, title):
     poster = requests.get(url, stream=True)
     filename = 'website/static/posters/' + imdb_id + '.jpg'
+    db_filename = '../static/posters/' + imdb_id + '.jpg'
     if poster.ok:
         print('LOG: save_movie_poster() response: ' + "% s" % poster.status_code)
         with open(filename, 'wb') as f:
@@ -53,13 +55,14 @@ def save_movie_poster(imdb_id, url, title):
         while not os.path.exists(filename):
             time.sleep(1)
         print('LOG: save_movie_poster() successfully saved poster for movie: ' + title)
-        return filename
+        return db_filename
     else:
         print('LOG: save_movie_poster() response: ' + "% s" % poster.status_code)
 
 def save_movie_trailer(imdb_id, url, title):
     trailer = requests.get(url, stream=True)
     filename = 'website/static/trailers/' + imdb_id + '.mp4'
+    db_filename = '../static/trailers/' + imdb_id + '.mp4'
     if trailer.ok:
         print('LOG: save_movie_trailer() response: ' + "% s" % trailer.status_code)
         with open(filename, 'wb') as f:
@@ -69,7 +72,7 @@ def save_movie_trailer(imdb_id, url, title):
         while not os.path.exists(filename):
             time.sleep(1)
         print('LOG: save_movie_poster() successfully saved trailer for movie: ' + title)
-        return filename
+        return db_filename
     else:
         print('LOG: save_movie_trailer() response: ' + "% s" % trailer.status_code)
 
