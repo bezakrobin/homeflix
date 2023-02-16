@@ -3,7 +3,7 @@
 {% block app %}
 <section class="showcase">
     <header>
-        <a href="/"><h2 class="logo">Homeflix</h2></a>
+        <a href="/" class="logo"><h2>Homeflix</h2></a>
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
             <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
         </form>
@@ -18,8 +18,8 @@
 
     <div class="text">
         <h2>{{header.title}}</h2>
-        <a class="play-btn" href="#"><i class="gg-play-button"></i>Play</a>
-        <a class="info-btn" href="#"><i class="gg-info"></i></i>More Info</a>
+        <a class="play-btn" href="#"><img class="play-icon" src="../static/icons/play.png">Play</a>
+        <a class="info-btn" href="#"><img class="info-icon" src="../static/icons/info.png">More Info</a>
     </div>
 
     <div class="right-overlay">

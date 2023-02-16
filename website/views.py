@@ -18,7 +18,7 @@ def add_movie():
         else:
             if is_imdb_url(url):
                 print('LOG: Valid IMDB movie url')
-                data = getFromImdb(url)
+                data = get_movie_from_imdb(url)
                 print(data)
             else:
                 print('LOG: Invalid IMDB movie url')
@@ -49,7 +49,7 @@ def save_movie_poster(url):
 # getting ready for adding a film to db, downloading trailer and poster
 # make it without needing id, send in just imdb url, and the program will care about all
 # prepare for connecting to bombuj, europix or something else, also prepare for the torrent solution
-def getFromImdb(url):
+def get_movie_from_imdb(url):
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 OPR/94.0.0.0'}
     imdb = requests.get(url, headers = headers)
     soup = BeautifulSoup(imdb.text, "html.parser")
