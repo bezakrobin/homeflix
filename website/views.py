@@ -17,7 +17,6 @@ def addMovie():
     url = "https://www.imdb.com/title/tt1630029/"
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 OPR/94.0.0.0'}
     data = getFromImdb(url, headers)
-    print(data)
     return render_template('settings.html')
 
 def getNewest():
