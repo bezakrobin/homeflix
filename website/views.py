@@ -89,14 +89,13 @@ def data_to_json_object(data, poster, trailer, url):
     return json_object
 
 def put_movie_data_into_db(json_object):
+    # check if the movie is already in DB, add only if not
     movies = requests.post('http://localhost:3000/movies', json = json_object)
     if movies.ok:
         print('LOG: put_movie_data_into_db() response: ' + "% s" % movies.status_code)
     else:
         print('LOG: put_movie_data_into_db() response: ' + "% s" % movies.status_code)
 
-
-# getting ready for adding a film to db
 # prepare for connecting to bombuj, europix or something else, also prepare for the torrent solution
 def get_movie_from_imdb(url):
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 OPR/94.0.0.0'}
