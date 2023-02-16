@@ -10,12 +10,12 @@ def home():
     header = getNewest()
     return render_template('home.html', header = header)
 
-@views.route('/add-movie')
+@views.route('/settings')
 def addMovie():
-    url = ""
+    url = "https://www.imdb.com/video/vi3565864217"
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 OPR/94.0.0.0'}
     data = getFromImdb(url, headers)
-    return render_template('add-movie.html')
+    return render_template('settings.html')
 
 def getNewest():
     movies = requests.get('http://localhost:3000/movies?_sort=year,id&_order=desc,desc')
