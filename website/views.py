@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, request, flash, url_for, redirect
 import requests, re, json
 from bs4 import BeautifulSoup
+from PIL import Image
 
 views = Blueprint('views', __name__)
 
@@ -19,7 +20,7 @@ def add_movie():
             if is_imdb_url(url):
                 print('LOG: Valid IMDB movie url')
                 data = get_movie_from_imdb(url)
-                print(data)
+                save_movie_poster(data[0], data[5])
             else:
                 print('LOG: Invalid IMDB movie url')
             return redirect(url_for('views.add_movie'))
@@ -38,12 +39,9 @@ def is_imdb_url(url):
     pattern = r'^https?://(www\.)?imdb\.com/title/tt\d+/$'
     return bool(re.match(pattern, url))
 
-def save_movie_poster(url):
-    with open('pic1.jpg', 'wb') as handle:
-        response = requests.get(url, stream=True)
-
-        if not response.ok:
-            print(response)
+def save_movie_poster(imdb_id, url):
+    img = Image.open(requests.get(url, stream = True).raw)
+    img.save('website/static/posters/' + imdb_id + '.jpg')
 
 
 # getting ready for adding a film to db, downloading trailer and poster
@@ -55,6 +53,7 @@ def get_movie_from_imdb(url):
     soup = BeautifulSoup(imdb.text, "html.parser")
     script = soup.find(id = '__NEXT_DATA__')
     data = json.loads(script.get_text())
+    imdb_id = data['props']['pageProps']['aboveTheFoldData']['id']
     title = data['props']['pageProps']['aboveTheFoldData']['originalTitleText']['text']
     year = data['props']['pageProps']['aboveTheFoldData']['releaseYear']['year']
     length = data['props']['pageProps']['aboveTheFoldData']['runtime']['displayableProperty']['value']['plainText']
@@ -65,4 +64,4 @@ def get_movie_from_imdb(url):
         categories.append(category['text'])
     trailer = data['props']['pageProps']['aboveTheFoldData']['primaryVideos']['edges'][0]['node']['playbackURLs'][0]['url']
     description = data['props']['pageProps']['aboveTheFoldData']['plot']['plotText']['plainText']
-    return [ title, year, length, rating, poster, categories, trailer, description ]
+    return [ imdb_id, title, year, length, rating, poster, categories, trailer, description ]
