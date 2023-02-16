@@ -6,8 +6,8 @@ views = Blueprint('views', __name__)
 
 @views.route('/')
 def home():
-    header = get_newest()
-    return render_template('home.html', header = header)
+    data = get_newest()
+    return render_template('home.html', data = data)
 
 @views.route('/settings', methods=['GET', 'POST'])
 def add_movie():

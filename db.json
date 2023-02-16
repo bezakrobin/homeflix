@@ -1,5 +1,22 @@
 {
   "movies_collection": [
-
+    {
+      "imdb_id": "tt1630029",
+      "title": "Avatar: The Way of Water",
+      "year": 2022,
+      "length": "3h 12m",
+      "rating": 7.8,
+      "poster_path": "../static/posters/tt1630029.jpg",
+      "categories": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Sci-Fi"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt1630029/",
+      "trailer_path": "../static/trailers/tt1630029.mp4",
+      "description": "Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Na'vi race to protect their home.",
+      "id": 1
+    }
   ]
 }

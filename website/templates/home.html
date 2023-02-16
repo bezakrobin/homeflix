@@ -10,14 +10,14 @@
     </header>
 
     <video id="trailer" autoplay muted loop>
-        <source src="{{header.trailer_path}}">
+        <source src="{{data.trailer_path}}">
     </video>
-    <img class="movie-poster" src="{{header.poster_path}}">
+    <img class="movie-poster" src="{{data.poster_path}}">
 
     <div class="overlay"></div>
 
     <div class="text">
-        <h2>{{header.title}}</h2>
+        <h2>{{data.title}}</h2>
         <a class="play-btn" href="#"><img class="play-icon" src="../static/icons/play.png">Play</a>
         <a class="info-btn" href="#"><img class="info-icon" src="../static/icons/info.png">More Info</a>
     </div>
@@ -25,7 +25,7 @@
     <div class="right-overlay">
         <div class="overlay-content">
             <img onclick="toggleVolume(this);"  class="volume-btn" src="../static/icons/mute.png">
-            <p><i class="fa fa-star-o" style="font-size:22px"></i>{{header.rating}}</p>
+            <p><i class="fa fa-star-o" style="font-size:22px"></i>{{data.rating}}</p>
         </div>
     </div>
 </section>
