@@ -7,7 +7,6 @@ views = Blueprint('views', __name__)
 @views.route('/')
 def home():
     header = get_newest()
-    print(header['trailer_path'])
     return render_template('home.html', header = header)
 
 @views.route('/settings', methods=['GET', 'POST'])
