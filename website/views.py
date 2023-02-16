@@ -2,6 +2,8 @@ from flask import Blueprint, render_template
 import requests
 from bs4 import BeautifulSoup
 import json
+import xmlrpc.client
+from xml.dom.minidom import parseString
 
 views = Blueprint('views', __name__)
 
@@ -12,9 +14,10 @@ def home():
 
 @views.route('/settings')
 def addMovie():
-    url = "https://www.imdb.com/video/vi3565864217"
+    url = "https://www.imdb.com/title/tt1630029/"
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 OPR/94.0.0.0'}
     data = getFromImdb(url, headers)
+    print(data)
     return render_template('settings.html')
 
 def getNewest():
