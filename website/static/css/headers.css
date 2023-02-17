@@ -102,13 +102,12 @@
 }
 
 input[type=search]:hover, input[type=search]:focus, input[type=search]:active {
-  width: 300px;
-  transition: 0.5s;
+  transition: 0.5s all ease-in-out;
 }
 
 input[type=search] {
-  width: 200px;
-  transition: 0.5s;
+  width: 100%;
+  transition: 0.5s all ease-in-out;
 }
 
 .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
