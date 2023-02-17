@@ -8,7 +8,7 @@ views = Blueprint('views', __name__)
 def home():
     data = get_newest()
     movies = get_movies_by_category()
-    return render_template('home.html', data = data)
+    return render_template('home.html', data = data, movies = movies)
 
 @views.route('/settings', methods=['GET', 'POST'])
 def add_movie():
@@ -187,15 +187,3 @@ def get_movies_by_category():
                 json[category].append(movie)
         json_object.append(json)
     return json_object
-
-
-# categories_length = len(json.loads(requests.get('http://localhost:3000/categories_collection').content))
-#     categories = []
-#     for i in range(1, categories_length + 1):
-#         categories_response = requests.get('http://localhost:3000/categories_collection/' + str(i))
-#         if categories_response.ok:
-#             print('LOG: fetch_categories() response: ' + "% s" % categories_response.status_code)
-#             categories_json = json.loads(categories_response.content)
-#             categories.append(categories_json['category_name'])
-#         else:
-#             print('LOG: fetch_categories() response: ' + "% s" % categories_response.status_code)
