@@ -103,6 +103,6 @@
   }
 
   .swiper-slide a img {
-    object-position: 0 0;
+    /* object-position: 0 0; */
   }
 }

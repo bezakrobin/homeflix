@@ -7,6 +7,7 @@ views = Blueprint('views', __name__)
 @views.route('/')
 def home():
     data = get_newest()
+    movies = get_movies_by_category()
     return render_template('home.html', data = data)
 
 @views.route('/settings', methods=['GET', 'POST'])
@@ -166,3 +167,35 @@ def put_categories_data_into_db(categories_array):
                 print('LOG: put_categories_data_into_db() response: ' + "% s" % categories.status_code)
             else:
                 print('LOG: put_categories_data_into_db() response: ' + "% s" % categories.status_code)
+
+def fetch_movies():
+    movies = json.loads(requests.get('http://localhost:3000/movies_collection').content)
+    return movies
+
+def get_movies_by_category():
+    json_object = []
+    categories = fetch_categories()
+    movies = fetch_movies()
+    for category in categories:
+        json = {
+            category : [
+            
+            ]
+        }
+        for movie in movies:
+            if category in movie['categories']:
+                json[category].append(movie)
+        json_object.append(json)
+    return json_object
+
+
+# categories_length = len(json.loads(requests.get('http://localhost:3000/categories_collection').content))
+#     categories = []
+#     for i in range(1, categories_length + 1):
+#         categories_response = requests.get('http://localhost:3000/categories_collection/' + str(i))
+#         if categories_response.ok:
+#             print('LOG: fetch_categories() response: ' + "% s" % categories_response.status_code)
+#             categories_json = json.loads(categories_response.content)
+#             categories.append(categories_json['category_name'])
+#         else:
+#             print('LOG: fetch_categories() response: ' + "% s" % categories_response.status_code)
