@@ -25,7 +25,9 @@
     <div class="right-overlay">
         <div class="overlay-content">
             <img onclick="toggleVolume(this);"  class="volume-btn" src="../static/icons/mute.png">
+            {% if data.rating %}
             <p><i class="fa fa-star-o" style="font-size:22px"></i>{{data.rating}}</p>
+            {% endif %}
         </div>
     </div>
 </section>

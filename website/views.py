@@ -21,7 +21,7 @@ def add_movie():
                 data = get_movie_from_imdb(url)
                 imdb_ids = fetch_imdb_id()
                 if data[0] in imdb_ids:
-                    print('LOG: This movie is already added')
+                    print('LOG: Movie "' + data[1] + '" is already added')
                 else:
                     poster_path = save_movie_poster(data[0], data[5], data[1])
                     trailer_path = save_movie_trailer(data[0], data[7], data[1])
@@ -138,19 +138,6 @@ def get_movie_from_imdb(url):
         print('LOG: get_movie_from_imdb() response: ' + "% s" % trailer.status_code)
     return [ imdb_id, title, year, length, rating, poster, categories, trailer, description ]
 
-def put_categories_data_into_db(categories_array):
-    for category in categories_array:
-        json_object = {
-            "category": category
-        }
-        categories = requests.post('http://localhost:3000/categories_collection', json = json_object)
-
-    # movie = requests.post('http://localhost:3000/movies_collection', json = json_object)
-    # if movie.ok:
-    #     print('LOG: put_movie_data_into_db() response: ' + "% s" % movie.status_code)
-    # else:
-    #     print('LOG: put_movie_data_into_db() response: ' + "% s" % movie.status_code)
-
 def fetch_categories():
     categories_length = len(json.loads(requests.get('http://localhost:3000/categories_collection').content))
     categories = []
@@ -159,7 +146,23 @@ def fetch_categories():
         if categories_response.ok:
             print('LOG: fetch_categories() response: ' + "% s" % categories_response.status_code)
             categories_json = json.loads(categories_response.content)
-            categories.append(categories_json['imdb_id'])
+            categories.append(categories_json['category_name'])
         else:
             print('LOG: fetch_categories() response: ' + "% s" % categories_response.status_code)
     return categories
+
+def put_categories_data_into_db(categories_array):
+    fetched_categories = fetch_categories()
+    for category in categories_array:
+        if category in fetched_categories:
+            print('LOG: Could not add category: ' + category +  ' already exists')
+        else:
+            json_object = {
+                "category_name": category
+            }
+            categories = requests.post('http://localhost:3000/categories_collection', json = json_object)
+            if categories.ok:
+                print('LOG: Added category: ' + category +  ' to DB')
+                print('LOG: put_categories_data_into_db() response: ' + "% s" % categories.status_code)
+            else:
+                print('LOG: put_categories_data_into_db() response: ' + "% s" % categories.status_code)
