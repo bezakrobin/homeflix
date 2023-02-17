@@ -186,12 +186,6 @@ p i {
 .logo {
   cursor: pointer;
   color: white;
-  border-bottom: 2px solid transparent;
-}
-
-.logo:hover {
-  border-bottom: 2px solid white;
-  transition: 250ms ease-in-out;
 }
 
 @media (max-width: 991px) {

@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, request, url_for, redirect
 import requests, re, json, os, time
 from bs4 import BeautifulSoup
+from PIL import Image
 
 views = Blueprint('views', __name__)
 
@@ -59,6 +60,9 @@ def save_movie_poster(imdb_id, url, title):
                     f.write(chunk)
         while not os.path.exists(filename):
             time.sleep(1)
+        im = Image.open('website/static/posters/' + imdb_id + '.jpg')
+        im.thumbnail(size=(500, 500))
+        im.save('website/static/posters/' + imdb_id + '.jpg')
         print('LOG: save_movie_poster() successfully saved poster for movie: ' + title)
         return db_filename
     else:
