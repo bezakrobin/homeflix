@@ -35,94 +35,28 @@
 <section class="netflix-container">
     {% for category in movies %}
         <!-- START -->
-        <h2>{{ category.keys()|first }}</h2>
-        <div class="swiper">
-            <div class="swiper-wrapper">
-                <div name="swiper-slide" class="swiper-slide">
-                    <a href="#">
-                        <img src="{{data.poster_path}}" alt="{{data.title}}">
-                        <div class="bottom-left transparent">
-                            <p>{{data.title}}</p>
-                        </div>
-                    </a>
+        {% if category[category.keys()|first]|length > 6 %}
+            <h2>{{ category.keys()|first }}</h2>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    {% for movie in category[category.keys()|first] %}
+                        {% if loop.index < 13 %}
+                            <div name="swiper-slide" class="swiper-slide">
+                                <a href="#">
+                                    <img src="{{movie.poster_path}}" alt="{{movie.title}}">
+                                    <div class="bottom-left transparent">
+                                        <p>{{ movie.title }}</p>
+                                    </div>
+                                </a>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
                 </div>
-                <div name="swiper-slide" class="swiper-slide">
-                    <a href="#">
-                        <img src="{{data.poster_path}}" alt="{{data.title}}">
-                        <div class="bottom-left transparent">
-                            <p>{{data.title}}</p>
-                        </div>
-                    </a>
-                </div>
-                <div name="swiper-slide" class="swiper-slide">
-                    <a href="#">
-                        <img src="{{data.poster_path}}" alt="{{data.title}}">
-                        <div class="bottom-left transparent">
-                            <p>{{data.title}}</p>
-                        </div>
-                    </a>
-                </div>
-                <div name="swiper-slide" class="swiper-slide">
-                    <a href="#">
-                        <img src="{{data.poster_path}}" alt="{{data.title}}">
-                        <div class="bottom-left transparent">
-                            <p>{{data.title}}</p>
-                        </div>
-                    </a>
-                </div>
-                <div name="swiper-slide" class="swiper-slide">
-                    <a href="#">
-                        <img src="{{data.poster_path}}" alt="{{data.title}}">
-                        <div class="bottom-left transparent">
-                            <p>{{data.title}}</p>
-                        </div>
-                    </a>
-                </div>
-                <div name="swiper-slide" class="swiper-slide">
-                    <a href="#">
-                        <img src="{{data.poster_path}}" alt="{{data.title}}">
-                        <div class="bottom-left transparent">
-                            <p>{{data.title}}</p>
-                        </div>
-                    </a>
-                </div>
-                <div name="swiper-slide" class="swiper-slide">
-                    <a href="#">
-                        <img src="{{data.poster_path}}" alt="{{data.title}}">
-                        <div class="bottom-left transparent">
-                            <p>{{data.title}}</p>
-                        </div>
-                    </a>
-                </div>
-                <div name="swiper-slide" class="swiper-slide">
-                    <a href="#">
-                        <img src="{{data.poster_path}}" alt="{{data.title}}">
-                        <div class="bottom-left transparent">
-                            <p>{{data.title}}</p>
-                        </div>
-                    </a>
-                </div>
-                <div name="swiper-slide" class="swiper-slide">
-                    <a href="#">
-                        <img src="{{data.poster_path}}" alt="{{data.title}}">
-                        <div class="bottom-left transparent">
-                            <p>{{data.title}}</p>
-                        </div>
-                    </a>
-                </div>
-                <div name="swiper-slide" class="swiper-slide">
-                    <a href="#">
-                        <img src="{{data.poster_path}}" alt="{{data.title}}">
-                        <div class="bottom-left transparent">
-                            <p>{{data.title}}</p>
-                        </div>
-                    </a>
-                </div>
+                <!-- <div class="swiper-pagination"></div> -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
-            <!-- <div class="swiper-pagination"></div> -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-        </div>
+        {% endif %}
         <!-- END -->
     {% endfor %}
 </section>
