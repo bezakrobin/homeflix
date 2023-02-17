@@ -40,16 +40,14 @@
             <div class="swiper">
                 <div class="swiper-wrapper">
                     {% for movie in category[category.keys()|first] %}
-                        {% if loop.index < 13 %}
-                            <div name="swiper-slide" class="swiper-slide">
-                                <a href="#">
-                                    <img src="{{movie.poster_path}}" alt="{{movie.title}}">
-                                    <div class="bottom-left transparent">
-                                        <p>{{ movie.title }}</p>
-                                    </div>
-                                </a>
-                            </div>
-                        {% endif %}
+                        <div name="swiper-slide" class="swiper-slide">
+                            <a href="#">
+                                <img src="{{movie.poster_path}}" alt="{{movie.title}}">
+                                <div class="bottom-left transparent">
+                                    <p>{{ movie.title }}</p>
+                                </div>
+                            </a>
+                        </div>
                     {% endfor %}
                 </div>
                 <!-- <div class="swiper-pagination"></div> -->
