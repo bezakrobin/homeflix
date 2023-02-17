@@ -64,21 +64,45 @@
 
 .bottom-left {
   position: absolute;
-  bottom: 60px;
-  left: 16px;
+  bottom: 20%;
+  width: 100%;
+  left: 0;
   transition: all 300ms ease-in-out;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.bottom-left p {
+  padding: 0 5%;
+  padding-top: 2%;
 }
 
 .white {
   color: white !important;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .transparent {
   color: transparent !important;
+  background-color: transparent;
 }
 
 @media (max-width: 991px) {
   .netflix-container {
     top: 90vh;
+  }
+
+  .bottom-left {
+    color: white !important;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .bottom-left p {
+    font-size: 10px;
+  }
+
+  .swiper-slide a img {
+    object-position: 0 0;
   }
 }

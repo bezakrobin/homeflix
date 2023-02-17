@@ -51,12 +51,14 @@ const swiper = new Swiper('.swiper', {
 var swiperSlide = document.getElementsByName("swiper-slide");
 swiperSlide.forEach(element => {
     element.addEventListener("mouseenter", () => {   
-        element.querySelector('.bottom-left').setAttribute('class', 'bottom-left white');
+        let text =element.querySelector('.bottom-left');
+        text.setAttribute('class', 'bottom-left white');
     });
 });
 
 swiperSlide.forEach(element => {
-    element.addEventListener("mouseleave", () => {   
-        element.querySelector('.bottom-left').setAttribute('class', 'bottom-left transparent');
+    element.addEventListener("mouseleave", () => {  
+        let text =element.querySelector('.bottom-left');
+        text.setAttribute('class', 'bottom-left transparent');
     });
 });
