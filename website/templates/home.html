@@ -35,7 +35,7 @@
 <section class="netflix-container">
     {% for category in movies %}
         <!-- START -->
-        {% if category[category.keys()|first]|length >= 1 %}
+        {% if category[category.keys()|first]|length > 18 %}
             <h2>{{ category.keys()|first }}</h2>
             <div class="swiper">
                 <div class="swiper-wrapper">

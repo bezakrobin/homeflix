@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request, url_for, redirect
-import requests, re, json, os, time
+import requests, re, json, os, time, random
 from bs4 import BeautifulSoup
 from PIL import Image
 
@@ -7,7 +7,7 @@ views = Blueprint('views', __name__)
 
 @views.route('/')
 def home():
-    data = get_newest()
+    data = get_random_movie()
     movies = get_movies_by_category()
     return render_template('home.html', data = data, movies = movies)
 
@@ -29,20 +29,24 @@ def add_movie():
                     trailer_path = save_movie_trailer(data[0], data[7], data[1])
                     json_object = data_to_json_object(data, poster_path, trailer_path, url)
                     put_movie_data_into_db(json_object)
-                    put_categories_data_into_db(data[6])
+                    fetched_categories = fetch_categories()
+                    put_categories_data_into_db(data[6], fetched_categories)
             else:
                 print('LOG: Invalid IMDB movie url')
             return redirect(url_for('views.add_movie'))
     return render_template('settings.html')
 
-def get_newest():
-    movies = requests.get('http://localhost:3000/movies_collection?_sort=year,id&_order=desc,desc')
+def get_random_movie():
+    movies_length = len(json.loads(requests.get('http://localhost:3000/movies_collection').content))
+    num = random.randrange(1, movies_length)
+    print(movies_length)
+    movies = requests.get('http://localhost:3000/movies_collection/' + str(num))
     if movies.ok:
-        print('LOG: get_newest() response: ' + "% s" % movies.status_code)
-        data = movies.json()[0]
+        print('LOG: get_random_movie() response: ' + "% s" % movies.status_code)
+        data = movies.json()
         return data
     else:
-        print('LOG: get_newest() response: ' + "% s" % movies.status_code)
+        print('LOG: get_random_movie() response: ' + "% s" % movies.status_code)
 
 def is_imdb_url(url):
     pattern = r'^https?://(www\.)?imdb\.com/title/tt\d+/$'
@@ -108,16 +112,15 @@ def put_movie_data_into_db(json_object):
         print('LOG: put_movie_data_into_db() response: ' + "% s" % movie.status_code)
 
 def fetch_imdb_id():
-    imdb_id_length = len(json.loads(requests.get('http://localhost:3000/movies_collection').content))
     imdb_ids = []
-    for i in range(1, imdb_id_length + 1):
-        imdb_id_response = requests.get('http://localhost:3000/movies_collection/' + str(i))
-        if imdb_id_response.ok:
-            print('LOG: fetch_imdb_id() response: ' + "% s" % imdb_id_response.status_code)
-            imdb_id_json = json.loads(imdb_id_response.content)
-            imdb_ids.append(imdb_id_json['imdb_id'])
-        else:
-            print('LOG: fetch_imdb_id() response: ' + "% s" % imdb_id_response.status_code)
+    imdb_id_response = requests.get('http://localhost:3000/movies_collection/')
+    if imdb_id_response.ok:
+        print('LOG: fetch_imdb_id() response: ' + "% s" % imdb_id_response.status_code)
+        imdb_id_json = json.loads(imdb_id_response.content)
+        for i in range(1, len(imdb_id_json)):
+            imdb_ids.append(imdb_id_json[i]['imdb_id'])
+    else:
+        print('LOG: fetch_imdb_id() response: ' + "% s" % imdb_id_response.status_code)        
     return imdb_ids
 
 def get_movie_from_imdb(url):
@@ -144,20 +147,18 @@ def get_movie_from_imdb(url):
     return [ imdb_id, title, year, length, rating, poster, categories, trailer, description ]
 
 def fetch_categories():
-    categories_length = len(json.loads(requests.get('http://localhost:3000/categories_collection').content))
     categories = []
-    for i in range(1, categories_length + 1):
-        categories_response = requests.get('http://localhost:3000/categories_collection/' + str(i))
-        if categories_response.ok:
-            print('LOG: fetch_categories() response: ' + "% s" % categories_response.status_code)
-            categories_json = json.loads(categories_response.content)
-            categories.append(categories_json['category_name'])
-        else:
-            print('LOG: fetch_categories() response: ' + "% s" % categories_response.status_code)
+    categories_response = requests.get('http://localhost:3000/categories_collection/')
+    if categories_response.ok:
+        print('LOG: fetch_categories() response: ' + "% s" % categories_response.status_code)
+        categories_json = json.loads(categories_response.content)
+        for i in range(1, len(categories_json)):
+            categories.append(categories_json[i]['category_name'])
+    else:
+        print('LOG: fetch_categories() response: ' + "% s" % categories_response.status_code)
     return categories
 
-def put_categories_data_into_db(categories_array):
-    fetched_categories = fetch_categories()
+def put_categories_data_into_db(categories_array, fetched_categories):
     for category in categories_array:
         if category in fetched_categories:
             print('LOG: Could not add category: ' + category +  ' already exists')
