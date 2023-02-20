@@ -1446,6 +1446,926 @@
       "trailer_path": "../static/trailers/tt0044741.mp4",
       "description": "A bureaucrat tries to find meaning in his life after he discovers he has terminal cancer.",
       "id": 85
+    },
+    {
+      "imdb_id": "tt0053604",
+      "title": "The Apartment",
+      "year": 1960,
+      "length": "2h 5m",
+      "rating": 8.3,
+      "poster_path": "../static/posters/tt0053604.jpg",
+      "categories": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt0053604/",
+      "trailer_path": "../static/trailers/tt0053604.mp4",
+      "description": "A Manhattan insurance clerk tries to rise in his company by letting its executives use his apartment for trysts, but complications and a romance of his own ensue.",
+      "id": 86
+    },
+    {
+      "imdb_id": "tt0211915",
+      "title": "Le fabuleux destin d'Amélie Poulain",
+      "year": 2001,
+      "length": "2h 2m",
+      "rating": 8.3,
+      "poster_path": "../static/posters/tt0211915.jpg",
+      "categories": [
+        "Comedy",
+        "Romance"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt0211915/",
+      "trailer_path": "../static/trailers/tt0211915.mp4",
+      "description": "Amélie is an innocent and naive girl in Paris with her own sense of justice. She decides to help those around her and, along the way, discovers love.",
+      "id": 87
+    },
+    {
+      "imdb_id": "tt0066921",
+      "title": "A Clockwork Orange",
+      "year": 1971,
+      "length": "2h 16m",
+      "rating": 8.3,
+      "poster_path": "../static/posters/tt0066921.jpg",
+      "categories": [
+        "Crime",
+        "Sci-Fi"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt0066921/",
+      "trailer_path": "../static/trailers/tt0066921.mp4",
+      "description": "In the future, a sadistic gang leader is imprisoned and volunteers for a conduct-aversion experiment, but it doesn't go as planned.",
+      "id": 88
+    },
+    {
+      "imdb_id": "tt0036775",
+      "title": "Double Indemnity",
+      "year": 1944,
+      "length": "1h 47m",
+      "rating": 8.3,
+      "poster_path": "../static/posters/tt0036775.jpg",
+      "categories": [
+        "Crime",
+        "Drama",
+        "Film-Noir",
+        "Mystery",
+        "Thriller"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt0036775/",
+      "trailer_path": "../static/trailers/tt0036775.mp4",
+      "description": "A Los Angeles insurance representative lets an alluring housewife seduce him into a scheme of insurance fraud and murder that arouses the suspicion of his colleague, an insurance investigator.",
+      "id": 89
+    },
+    {
+      "imdb_id": "tt8503618",
+      "title": "Hamilton",
+      "year": 2020,
+      "length": "2h 40m",
+      "rating": 8.4,
+      "poster_path": "../static/posters/tt8503618.jpg",
+      "categories": [
+        "Biography",
+        "Drama",
+        "History",
+        "Musical"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt8503618/",
+      "trailer_path": "../static/trailers/tt8503618.mp4",
+      "description": "The real life of one of America's foremost founding fathers and first Secretary of the Treasury, Alexander Hamilton. Captured live on Broadway from the Richard Rodgers Theater with the original Broadway cast.",
+      "id": 90
+    },
+    {
+      "imdb_id": "tt1745960",
+      "title": "Top Gun: Maverick",
+      "year": 2022,
+      "length": "2h 10m",
+      "rating": 8.3,
+      "poster_path": "../static/posters/tt1745960.jpg",
+      "categories": [
+        "Action",
+        "Drama"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt1745960/",
+      "trailer_path": "../static/trailers/tt1745960.mp4",
+      "description": "After thirty years, Maverick is still pushing the envelope as a top naval aviator, but must confront ghosts of his past when he leads TOP GUN's elite graduates on a mission that demands the ultimate sacrifice from those chosen to fly it.",
+      "id": 91
+    },
+    {
+      "imdb_id": "tt1255953",
+      "title": "Incendies",
+      "year": 2010,
+      "length": "2h 11m",
+      "rating": 8.3,
+      "poster_path": "../static/posters/tt1255953.jpg",
+      "categories": [
+        "Drama",
+        "Mystery"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt1255953/",
+      "trailer_path": "../static/trailers/tt1255953.mp4",
+      "description": "Twins journey to the Middle East to discover their family history and fulfill their mother's last wishes.",
+      "id": 92
+    },
+    {
+      "imdb_id": "tt1049413",
+      "title": "Up",
+      "year": 2009,
+      "length": "1h 36m",
+      "rating": 8.3,
+      "poster_path": "../static/posters/tt1049413.jpg",
+      "categories": [
+        "Animation",
+        "Adventure",
+        "Comedy",
+        "Drama",
+        "Family"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt1049413/",
+      "trailer_path": "../static/trailers/tt1049413.mp4",
+      "description": "78-year-old Carl Fredricksen travels to Paradise Falls in his house equipped with balloons, inadvertently taking a young stowaway.",
+      "id": 93
+    },
+    {
+      "imdb_id": "tt1832382",
+      "title": "Jodaeiye Nader az Simin",
+      "year": 2011,
+      "length": "2h 3m",
+      "rating": 8.3,
+      "poster_path": "../static/posters/tt1832382.jpg",
+      "categories": [
+        "Drama"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt1832382/",
+      "trailer_path": "../static/trailers/tt1832382.mp4",
+      "description": "A married couple are faced with a difficult decision - to improve the life of their child by moving to another country or to stay in Iran and look after a deteriorating parent who has Alzheimer's disease.",
+      "id": 94
+    },
+    {
+      "imdb_id": "tt0208092",
+      "title": "Snatch",
+      "year": 2000,
+      "length": "1h 44m",
+      "rating": 8.2,
+      "poster_path": "../static/posters/tt0208092.jpg",
+      "categories": [
+        "Comedy",
+        "Crime"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt0208092/",
+      "trailer_path": "../static/trailers/tt0208092.mp4",
+      "description": "Unscrupulous boxing promoters, violent bookmakers, a Russian gangster, incompetent amateur robbers and supposedly Jewish jewelers fight to track down a priceless stolen diamond.",
+      "id": 95
+    },
+    {
+      "imdb_id": "tt0986264",
+      "title": "Taare Zameen Par",
+      "year": 2007,
+      "length": "2h 45m",
+      "rating": 8.3,
+      "poster_path": "../static/posters/tt0986264.jpg",
+      "categories": [
+        "Drama",
+        "Family"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt0986264/",
+      "trailer_path": "../static/trailers/tt0986264.mp4",
+      "description": "An eight-year-old boy is thought to be a lazy trouble-maker, until the new art teacher has the patience and compassion to discover the real problem behind his struggles in school.",
+      "id": 96
+    },
+    {
+      "imdb_id": "tt8579674",
+      "title": "1917",
+      "year": 2019,
+      "length": "1h 59m",
+      "rating": 8.2,
+      "poster_path": "../static/posters/tt8579674.jpg",
+      "categories": [
+        "Action",
+        "Drama",
+        "War"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt8579674/",
+      "trailer_path": "../static/trailers/tt8579674.mp4",
+      "description": "April 6th, 1917. As an infantry battalion assembles to wage war deep in enemy territory, two soldiers are assigned to race against time and deliver a message that will stop 1,600 men from walking straight into a deadly trap.",
+      "id": 97
+    },
+    {
+      "imdb_id": "tt5074352",
+      "title": "Dangal",
+      "year": 2016,
+      "length": "2h 41m",
+      "rating": 8.3,
+      "poster_path": "../static/posters/tt5074352.jpg",
+      "categories": [
+        "Action",
+        "Biography",
+        "Drama",
+        "Sport"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt5074352/",
+      "trailer_path": "../static/trailers/tt5074352.mp4",
+      "description": "Former wrestler Mahavir Singh Phogat and his two wrestler daughters struggle towards glory at the Commonwealth Games in the face of societal oppression.",
+      "id": 98
+    },
+    {
+      "imdb_id": "tt0372784",
+      "title": "Batman Begins",
+      "year": 2005,
+      "length": "2h 20m",
+      "rating": 8.2,
+      "poster_path": "../static/posters/tt0372784.jpg",
+      "categories": [
+        "Action",
+        "Crime",
+        "Drama"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt0372784/",
+      "trailer_path": "../static/trailers/tt0372784.mp4",
+      "description": "After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from corruption.",
+      "id": 99
+    },
+    {
+      "imdb_id": "tt10272386",
+      "title": "The Father",
+      "year": 2020,
+      "length": "1h 37m",
+      "rating": 8.2,
+      "poster_path": "../static/posters/tt10272386.jpg",
+      "categories": [
+        "Drama",
+        "Mystery"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt10272386/",
+      "trailer_path": "../static/trailers/tt10272386.mp4",
+      "description": "A man refuses all assistance from his daughter as he ages. As he tries to make sense of his changing circumstances, he begins to doubt his loved ones, his own mind and even the fabric of his reality.",
+      "id": 100
+    },
+    {
+      "imdb_id": "tt0993846",
+      "title": "The Wolf of Wall Street",
+      "year": 2013,
+      "length": "3h",
+      "rating": 8.2,
+      "poster_path": "../static/posters/tt0993846.jpg",
+      "categories": [
+        "Biography",
+        "Comedy",
+        "Crime",
+        "Drama"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt0993846/",
+      "trailer_path": "../static/trailers/tt0993846.mp4",
+      "description": "Based on the true story of Jordan Belfort, from his rise to a wealthy stock-broker living the high life to his fall involving crime, corruption and the federal government.",
+      "id": 101
+    },
+    {
+      "imdb_id": "tt6966692",
+      "title": "Green Book",
+      "year": 2018,
+      "length": "2h 10m",
+      "rating": 8.2,
+      "poster_path": "../static/posters/tt6966692.jpg",
+      "categories": [
+        "Biography",
+        "Comedy",
+        "Drama",
+        "Music"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt6966692/",
+      "trailer_path": "../static/trailers/tt6966692.mp4",
+      "description": "A working-class Italian-American bouncer becomes the driver for an African-American classical pianist on a tour of venues through the 1960s American South.",
+      "id": 102
+    },
+    {
+      "imdb_id": "tt0457430",
+      "title": "El laberinto del fauno",
+      "year": 2006,
+      "length": "1h 58m",
+      "rating": 8.2,
+      "poster_path": "../static/posters/tt0457430.jpg",
+      "categories": [
+        "Drama",
+        "Fantasy",
+        "War"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt0457430/",
+      "trailer_path": "../static/trailers/tt0457430.mp4",
+      "description": "In the Falangist Spain of 1944, the bookish young stepdaughter of a sadistic army officer escapes into an eerie but captivating fantasy world.",
+      "id": 103
+    },
+    {
+      "imdb_id": "tt0469494",
+      "title": "There Will Be Blood",
+      "year": 2007,
+      "length": "2h 38m",
+      "rating": 8.2,
+      "poster_path": "../static/posters/tt0469494.jpg",
+      "categories": [
+        "Drama"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt0469494/",
+      "trailer_path": "../static/trailers/tt0469494.mp4",
+      "description": "A story of family, religion, hatred, oil and madness, focusing on a turn-of-the-century prospector in the early days of the business.",
+      "id": 104
+    },
+    {
+      "imdb_id": "tt1130884",
+      "title": "Shutter Island",
+      "year": 2010,
+      "length": "2h 18m",
+      "rating": 8.2,
+      "poster_path": "../static/posters/tt1130884.jpg",
+      "categories": [
+        "Mystery",
+        "Thriller"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt1130884/",
+      "trailer_path": "../static/trailers/tt1130884.mp4",
+      "description": "In 1954, a U.S. Marshal investigates the disappearance of a murderer who escaped from a hospital for the criminally insane.",
+      "id": 105
+    },
+    {
+      "imdb_id": "tt0477348",
+      "title": "No Country for Old Men",
+      "year": 2007,
+      "length": "2h 2m",
+      "rating": 8.2,
+      "poster_path": "../static/posters/tt0477348.jpg",
+      "categories": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt0477348/",
+      "trailer_path": "../static/trailers/tt0477348.mp4",
+      "description": "Violence and mayhem ensue after a hunter stumbles upon a drug deal gone wrong and more than two million dollars in cash near the Rio Grande.",
+      "id": 106
+    },
+    {
+      "imdb_id": "tt0266697",
+      "title": "Kill Bill: Vol. 1",
+      "year": 2003,
+      "length": "1h 51m",
+      "rating": 8.2,
+      "poster_path": "../static/posters/tt0266697.jpg",
+      "categories": [
+        "Action",
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt0266697/",
+      "trailer_path": "../static/trailers/tt0266697.mp4",
+      "description": "After awakening from a four-year coma, a former assassin wreaks vengeance on the team of assassins who betrayed her.",
+      "id": 107
+    },
+    {
+      "imdb_id": "tt10872600",
+      "title": "Spider-Man: No Way Home",
+      "year": 2021,
+      "length": "2h 28m",
+      "rating": 8.2,
+      "poster_path": "../static/posters/tt10872600.jpg",
+      "categories": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Sci-Fi"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt10872600/",
+      "trailer_path": "../static/trailers/tt10872600.mp4",
+      "description": "With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.",
+      "id": 108
+    },
+    {
+      "imdb_id": "tt0266543",
+      "title": "Finding Nemo",
+      "year": 2003,
+      "length": "1h 40m",
+      "rating": 8.2,
+      "poster_path": "../static/posters/tt0266543.jpg",
+      "categories": [
+        "Animation",
+        "Adventure",
+        "Comedy",
+        "Family"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt0266543/",
+      "trailer_path": "../static/trailers/tt0266543.mp4",
+      "description": "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home.",
+      "id": 109
+    },
+    {
+      "imdb_id": "tt0434409",
+      "title": "V for Vendetta",
+      "year": 2005,
+      "length": "2h 12m",
+      "rating": 8.2,
+      "poster_path": "../static/posters/tt0434409.jpg",
+      "categories": [
+        "Action",
+        "Drama",
+        "Sci-Fi",
+        "Thriller"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt0434409/",
+      "trailer_path": "../static/trailers/tt0434409.mp4",
+      "description": "In a future British dystopian society, a shadowy freedom fighter, known only by the alias of \"V\", plots to overthrow the tyrannical government - with the help of a young woman.",
+      "id": 110
+    },
+    {
+      "imdb_id": "tt2096673",
+      "title": "Inside Out",
+      "year": 2015,
+      "length": "1h 35m",
+      "rating": 8.2,
+      "poster_path": "../static/posters/tt2096673.jpg",
+      "categories": [
+        "Animation",
+        "Adventure",
+        "Comedy",
+        "Drama",
+        "Family",
+        "Fantasy"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt2096673/",
+      "trailer_path": "../static/trailers/tt2096673.mp4",
+      "description": "After young Riley is uprooted from her Midwest life and moved to San Francisco, her emotions - Joy, Fear, Anger, Disgust and Sadness - conflict on how best to navigate a new city, house, and school.",
+      "id": 111
+    },
+    {
+      "imdb_id": "tt1305806",
+      "title": "El secreto de sus ojos",
+      "year": 2009,
+      "length": "2h 9m",
+      "rating": 8.2,
+      "poster_path": "../static/posters/tt1305806.jpg",
+      "categories": [
+        "Drama",
+        "Mystery",
+        "Romance",
+        "Thriller"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt1305806/",
+      "trailer_path": "../static/trailers/tt1305806.mp4",
+      "description": "A retired legal counselor writes a novel hoping to find closure for one of his past unresolved homicide cases and for his unreciprocated love with his superior - both of which still haunt him decades later.",
+      "id": 112
+    },
+    {
+      "imdb_id": "tt0347149",
+      "title": "Hauru no ugoku shiro",
+      "year": 2004,
+      "length": "1h 59m",
+      "rating": 8.2,
+      "poster_path": "../static/posters/tt0347149.jpg",
+      "categories": [
+        "Animation",
+        "Adventure",
+        "Family",
+        "Fantasy"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt0347149/",
+      "trailer_path": "../static/trailers/tt0347149.mp4",
+      "description": "When an unconfident young woman is cursed with an old body by a spiteful witch, her only chance of breaking the spell lies with a self-indulgent yet insecure young wizard and his companions in his legged, walking castle.",
+      "id": 113
+    },
+    {
+      "imdb_id": "tt5027774",
+      "title": "Three Billboards Outside Ebbing, Missouri",
+      "year": 2017,
+      "length": "1h 55m",
+      "rating": 8.1,
+      "poster_path": "../static/posters/tt5027774.jpg",
+      "categories": [
+        "Comedy",
+        "Crime",
+        "Drama"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt5027774/",
+      "trailer_path": "../static/trailers/tt5027774.mp4",
+      "description": "A mother personally challenges the local authorities to solve her daughter's murder when they fail to catch the culprit.",
+      "id": 114
+    },
+    {
+      "imdb_id": "tt1392214",
+      "title": "Prisoners",
+      "year": 2013,
+      "length": "2h 33m",
+      "rating": 8.1,
+      "poster_path": "../static/posters/tt1392214.jpg",
+      "categories": [
+        "Crime",
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt1392214/",
+      "trailer_path": "../static/trailers/tt1392214.mp4",
+      "description": "When Keller Dover's daughter and her friend go missing, he takes matters into his own hands as the police pursue multiple leads and the pressure mounts.",
+      "id": 115
+    },
+    {
+      "imdb_id": "tt1291584",
+      "title": "Warrior",
+      "year": 2011,
+      "length": "2h 20m",
+      "rating": 8.2,
+      "poster_path": "../static/posters/tt1291584.jpg",
+      "categories": [
+        "Action",
+        "Drama",
+        "Sport"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt1291584/",
+      "trailer_path": "../static/trailers/tt1291584.mp4",
+      "description": "The youngest son of an alcoholic former boxer returns home, where he's trained by his father for competition in a mixed martial arts tournament - a path that puts the fighter on a collision course with his estranged, older brother.",
+      "id": 116
+    },
+    {
+      "imdb_id": "tt1205489",
+      "title": "Gran Torino",
+      "year": 2008,
+      "length": "1h 56m",
+      "rating": 8.1,
+      "poster_path": "../static/posters/tt1205489.jpg",
+      "categories": [
+        "Drama"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt1205489/",
+      "trailer_path": "../static/trailers/tt1205489.mp4",
+      "description": "Disgruntled Korean War veteran Walt Kowalski sets out to reform his neighbor, Thao Lor, a Hmong teenager who tried to steal Kowalski's prized possession: a 1972 Gran Torino.",
+      "id": 117
+    },
+    {
+      "imdb_id": "tt0264464",
+      "title": "Catch Me If You Can",
+      "year": 2002,
+      "length": "2h 21m",
+      "rating": 8.1,
+      "poster_path": "../static/posters/tt0264464.jpg",
+      "categories": [
+        "Biography",
+        "Crime",
+        "Drama"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt0264464/",
+      "trailer_path": "../static/trailers/tt0264464.mp4",
+      "description": "Barely 21 yet, Frank is a skilled forger who has passed as a doctor, lawyer and pilot. FBI agent Carl becomes obsessed with tracking down the con man, who only revels in the pursuit.",
+      "id": 118
+    },
+    {
+      "imdb_id": "tt0405159",
+      "title": "Million Dollar Baby",
+      "year": 2004,
+      "length": "2h 12m",
+      "rating": 8.1,
+      "poster_path": "../static/posters/tt0405159.jpg",
+      "categories": [
+        "Drama",
+        "Sport"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt0405159/",
+      "trailer_path": "../static/trailers/tt0405159.mp4",
+      "description": "A determined woman works with a hardened boxing trainer to become a professional.",
+      "id": 119
+    },
+    {
+      "imdb_id": "tt4729430",
+      "title": "Klaus",
+      "year": 2019,
+      "length": "1h 36m",
+      "rating": 8.2,
+      "poster_path": "../static/posters/tt4729430.jpg",
+      "categories": [
+        "Animation",
+        "Adventure",
+        "Comedy",
+        "Family",
+        "Fantasy"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt4729430/",
+      "trailer_path": "../static/trailers/tt4729430.mp4",
+      "description": "A simple act of kindness always sparks another, even in a frozen, faraway place. When Smeerensburg's new postman, Jesper, befriends toymaker Klaus, their gifts melt an age-old feud and deliver a sleigh full of holiday traditions.",
+      "id": 120
+    },
+    {
+      "imdb_id": "tt2024544",
+      "title": "12 Years a Slave",
+      "year": 2013,
+      "length": "2h 14m",
+      "rating": 8.1,
+      "poster_path": "../static/posters/tt2024544.jpg",
+      "categories": [
+        "Biography",
+        "Drama",
+        "History"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt2024544/",
+      "trailer_path": "../static/trailers/tt2024544.mp4",
+      "description": "In the antebellum United States, Solomon Northup, a free black man from upstate New York, is abducted and sold into slavery.",
+      "id": 121
+    },
+    {
+      "imdb_id": "tt1201607",
+      "title": "Harry Potter and the Deathly Hallows: Part 2",
+      "year": 2011,
+      "length": "2h 10m",
+      "rating": 8.1,
+      "poster_path": "../static/posters/tt1201607.jpg",
+      "categories": [
+        "Adventure",
+        "Family",
+        "Fantasy",
+        "Mystery"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt1201607/",
+      "trailer_path": "../static/trailers/tt1201607.mp4",
+      "description": "Harry, Ron, and Hermione search for Voldemort's remaining Horcruxes in their effort to destroy the Dark Lord as the final battle rages on at Hogwarts.",
+      "id": 122
+    },
+    {
+      "imdb_id": "tt2267998",
+      "title": "Gone Girl",
+      "year": 2014,
+      "length": "2h 29m",
+      "rating": 8.1,
+      "poster_path": "../static/posters/tt2267998.jpg",
+      "categories": [
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt2267998/",
+      "trailer_path": "../static/trailers/tt2267998.mp4",
+      "description": "With his wife's disappearance having become the focus of an intense media circus, a man sees the spotlight turned on him when it's suspected that he may not be innocent.",
+      "id": 123
+    },
+    {
+      "imdb_id": "tt2278388",
+      "title": "The Grand Budapest Hotel",
+      "year": 2014,
+      "length": "1h 39m",
+      "rating": 8.1,
+      "poster_path": "../static/posters/tt2278388.jpg",
+      "categories": [
+        "Adventure",
+        "Comedy",
+        "Crime"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt2278388/",
+      "trailer_path": "../static/trailers/tt2278388.mp4",
+      "description": "A writer encounters the owner of an aging high-class hotel, who tells him of his early years serving as a lobby boy in the hotel's glorious years under an exceptional concierge.",
+      "id": 124
+    },
+    {
+      "imdb_id": "tt2119532",
+      "title": "Hacksaw Ridge",
+      "year": 2016,
+      "length": "2h 19m",
+      "rating": 8.1,
+      "poster_path": "../static/posters/tt2119532.jpg",
+      "categories": [
+        "Biography",
+        "Drama",
+        "History",
+        "War"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt2119532/",
+      "trailer_path": "../static/trailers/tt2119532.mp4",
+      "description": "World War II American Army Medic Desmond T. Doss, who served during the Battle of Okinawa, refuses to kill people and becomes the first man in American history to receive the Medal of Honor without firing a shot.",
+      "id": 125
+    },
+    {
+      "imdb_id": "tt0353969",
+      "title": "Salinui chueok",
+      "year": 2003,
+      "length": "2h 11m",
+      "rating": 8.1,
+      "poster_path": "../static/posters/tt0353969.jpg",
+      "categories": [
+        "Crime",
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt0353969/",
+      "trailer_path": "../static/trailers/tt0353969.mp4",
+      "description": "In a small Korean province in 1986, two detectives struggle with the case of multiple young women being found raped and murdered by an unknown culprit.",
+      "id": 126
+    },
+    {
+      "imdb_id": "tt3011894",
+      "title": "Relatos salvajes",
+      "year": 2014,
+      "length": "2h 2m",
+      "rating": 8.1,
+      "poster_path": "../static/posters/tt3011894.jpg",
+      "categories": [
+        "Comedy",
+        "Drama",
+        "Thriller"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt3011894/",
+      "trailer_path": "../static/trailers/tt3011894.mp4",
+      "description": "Six short stories that explore the extremities of human behavior involving people in distress.",
+      "id": 127
+    },
+    {
+      "imdb_id": "tt1392190",
+      "title": "Mad Max: Fury Road",
+      "year": 2015,
+      "length": "2h",
+      "rating": 8.1,
+      "poster_path": "../static/posters/tt1392190.jpg",
+      "categories": [
+        "Action",
+        "Adventure",
+        "Sci-Fi",
+        "Thriller"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt1392190/",
+      "trailer_path": "../static/trailers/tt1392190.mp4",
+      "description": "In a post-apocalyptic wasteland, a woman rebels against a tyrannical ruler in search for her homeland with the aid of a group of female prisoners, a psychotic worshiper, and a drifter named Max.",
+      "id": 128
+    },
+    {
+      "imdb_id": "tt0978762",
+      "title": "Mary and Max.",
+      "year": 2009,
+      "length": "1h 32m",
+      "rating": 8.1,
+      "poster_path": "../static/posters/tt0978762.jpg",
+      "categories": [
+        "Animation",
+        "Comedy",
+        "Drama"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt0978762/",
+      "trailer_path": "../static/trailers/tt0978762.mp4",
+      "description": "A tale of friendship between two unlikely pen pals: Mary, a lonely, eight-year-old girl living in the suburbs of Melbourne, and Max, a forty-four-year old, severely obese man living in New York.",
+      "id": 129
+    },
+    {
+      "imdb_id": "tt0892769",
+      "title": "How to Train Your Dragon",
+      "year": 2010,
+      "length": "1h 38m",
+      "rating": 8.1,
+      "poster_path": "../static/posters/tt0892769.jpg",
+      "categories": [
+        "Animation",
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Family",
+        "Fantasy"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt0892769/",
+      "trailer_path": "../static/trailers/tt0892769.mp4",
+      "description": "A hapless young Viking who aspires to hunt dragons becomes the unlikely friend of a young dragon himself, and learns there may be more to the creatures than he assumed.",
+      "id": 130
+    },
+    {
+      "imdb_id": "tt3170832",
+      "title": "Room",
+      "year": 2015,
+      "length": "1h 58m",
+      "rating": 8.1,
+      "poster_path": "../static/posters/tt3170832.jpg",
+      "categories": [
+        "Drama",
+        "Thriller"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt3170832/",
+      "trailer_path": "../static/trailers/tt3170832.mp4",
+      "description": "Held captive for 7 years in an enclosed space, a woman and her young son finally gain their freedom, allowing the boy to experience the outside world for the first time.",
+      "id": 131
+    },
+    {
+      "imdb_id": "tt0198781",
+      "title": "Monsters, Inc.",
+      "year": 2001,
+      "length": "1h 32m",
+      "rating": 8.1,
+      "poster_path": "../static/posters/tt0198781.jpg",
+      "categories": [
+        "Animation",
+        "Adventure",
+        "Comedy",
+        "Family",
+        "Fantasy"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt0198781/",
+      "trailer_path": "../static/trailers/tt0198781.mp4",
+      "description": "In order to power the city, monsters have to scare children so that they scream. However, the children are toxic to the monsters, and after a child gets through, two monsters realize things may not be what they think.",
+      "id": 132
+    },
+    {
+      "imdb_id": "tt0395169",
+      "title": "Hotel Rwanda",
+      "year": 2004,
+      "length": "2h 1m",
+      "rating": 8.1,
+      "poster_path": "../static/posters/tt0395169.jpg",
+      "categories": [
+        "Biography",
+        "Drama",
+        "History",
+        "War"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt0395169/",
+      "trailer_path": "../static/trailers/tt0395169.mp4",
+      "description": "Paul Rusesabagina, a hotel manager, houses over a thousand Tutsi refugees during their struggle against the Hutu militia in Rwanda, Africa.",
+      "id": 133
+    },
+    {
+      "imdb_id": "tt1950186",
+      "title": "Ford v Ferrari",
+      "year": 2019,
+      "length": "2h 32m",
+      "rating": 8.1,
+      "poster_path": "../static/posters/tt1950186.jpg",
+      "categories": [
+        "Action",
+        "Biography",
+        "Drama",
+        "Sport"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt1950186/",
+      "trailer_path": "../static/trailers/tt1950186.mp4",
+      "description": "American car designer Carroll Shelby and driver Ken Miles battle corporate interference and the laws of physics to build a revolutionary race car for Ford in order to defeat Ferrari at the 24 Hours of Le Mans in 1966.",
+      "id": 134
+    },
+    {
+      "imdb_id": "tt0382932",
+      "title": "Ratatouille",
+      "year": 2007,
+      "length": "1h 51m",
+      "rating": 8.1,
+      "poster_path": "../static/posters/tt0382932.jpg",
+      "categories": [
+        "Animation",
+        "Adventure",
+        "Comedy",
+        "Family",
+        "Fantasy"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt0382932/",
+      "trailer_path": "../static/trailers/tt0382932.mp4",
+      "description": "A rat who can cook makes an unusual alliance with a young kitchen worker at a famous Paris restaurant.",
+      "id": 135
+    },
+    {
+      "imdb_id": "tt1895587",
+      "title": "Spotlight",
+      "year": 2015,
+      "length": "2h 9m",
+      "rating": 8.1,
+      "poster_path": "../static/posters/tt1895587.jpg",
+      "categories": [
+        "Biography",
+        "Crime",
+        "Drama"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt1895587/",
+      "trailer_path": "../static/trailers/tt1895587.mp4",
+      "description": "The true story of how the Boston Globe uncovered the massive scandal of child molestation and cover-up within the local Catholic Archdiocese, shaking the entire Catholic Church to its core.",
+      "id": 136
+    },
+    {
+      "imdb_id": "tt3315342",
+      "title": "Logan",
+      "year": 2017,
+      "length": "2h 17m",
+      "rating": 8.1,
+      "poster_path": "../static/posters/tt3315342.jpg",
+      "categories": [
+        "Action",
+        "Drama",
+        "Sci-Fi",
+        "Thriller"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt3315342/",
+      "trailer_path": "../static/trailers/tt3315342.mp4",
+      "description": "In a future where mutants are nearly extinct, an elderly and weary Logan leads a quiet life. But when Laura, a mutant child pursued by scientists, comes to him for help, he must get her to safety.",
+      "id": 137
+    },
+    {
+      "imdb_id": "tt1979320",
+      "title": "Rush",
+      "year": 2013,
+      "length": "2h 3m",
+      "rating": 8.1,
+      "poster_path": "../static/posters/tt1979320.jpg",
+      "categories": [
+        "Action",
+        "Biography",
+        "Drama",
+        "Sport"
+      ],
+      "imdb_url": "https://www.imdb.com/title/tt1979320/",
+      "trailer_path": "../static/trailers/tt1979320.mp4",
+      "description": "The merciless 1970s rivalry between Formula One rivals James Hunt and Niki Lauda.",
+      "id": 138
     }
   ],
   "categories_collection": [
@@ -1528,6 +2448,14 @@
     {
       "category_name": "Action",
       "id": 20
+    },
+    {
+      "category_name": "Film-Noir",
+      "id": 21
+    },
+    {
+      "category_name": "Sport",
+      "id": 22
     }
   ]
 }
